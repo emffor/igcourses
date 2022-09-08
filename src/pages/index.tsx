@@ -1,9 +1,16 @@
-import { Flex, Input, Button, Stack, FormLabel, FormControl } from '@chakra-ui/react';
+import { Flex, Button, Stack, Image, FormControl, Box } from '@chakra-ui/react';
+import { Input } from '../components/Form/Input';
+
+import LogoOneSvg from '../assets/logo-one.svg';
 
 export default function Home() {
   return (
-    <Flex width={"100vw"} h="100vh" justify="center" alignItems={"center"}>
-
+    <Flex width={"100vw"} h="100vh" justify="center" alignItems={"center"} flexDirection="column">
+      <Image
+        src='https://i.ibb.co/n6C981c/logoone.png'
+        alt="Logo One"
+        w="8rem"
+      />
       {/* as => significa que está declarando para o Flex que ele é um form e nao uma div */}
       <Flex
         as="form"
@@ -13,41 +20,23 @@ export default function Home() {
         padding="8"
         borderRadius={8}
         flexDirection="column"
+        mb="14"
       >
         <Stack spacing="4">
           {/* Stack é um componente do Chakra que serve para empilhar componentes espaçamento*/}
-
           <FormControl>
-            {/* FormControl é um componente do Chakra que serve para agrupar componentes */}
-
-            <FormLabel htmlFor="email">E-mail</FormLabel>
             <Input
               name="email"
-              id="email"
               type="email"
-              focusBorderColor='yellow.600' //cor da borda quando o input estiver em foco
-              bgColor='gray.900' //cor de fundo do input
-              variant={"filled"} //estilo do input
-              _hover={{
-                bgColor: 'gray.900' //cor de fundo do input quando o mouse estiver em cima
-              }}
-              size="lg" //tamanho do input
+              label="E-mail"
             />
           </FormControl>
 
           <FormControl>
-            <FormLabel htmlFor="password">Password</FormLabel>
             <Input
               name="password"
-              id="password"
               type="password"
-              focusBorderColor='yellow.600' //cor da borda quando o input estiver em foco
-              bgColor='gray.900' //cor de fundo do input
-              variant={"filled"} //estilo do input
-              _hover={{
-                bgColor: 'gray.900' //cor de fundo do input quando o mouse estiver em cima
-              }}
-              size="lg" //tamanho do input
+              label="Senha"
             />
           </FormControl>
 
@@ -57,8 +46,8 @@ export default function Home() {
         <Button
           type="submit"
           mt="6"
-          bg={"yellow.600"}
-          colorScheme="yellow"
+          bg={"yellow.500"}
+          colorScheme="whiteAlpha"
           color={"white"}
         >
           Entrar
