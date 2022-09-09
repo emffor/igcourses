@@ -9,23 +9,29 @@ export function SideBarNav() {
     return (
         <Stack spacing="12" align="flex-start">
             <NavSection title={"GERAL"}>
-                <Link display="flex" alignContent="center">
+                <Link display="flex" alignContent="center" href='/dashboard'>
                     <Icon as={RiDashboard2Line} fontSize="20" />
                     <Text ml="4" fontWeight="medium">
                         Dashboard
                     </Text>
                 </Link>
-                <Link display="flex" alignContent="center">
+                <Link display="flex" alignContent="center" href='/users'>
                     <Icon as={RiDashboardLine} fontSize="20" />
                     <Text ml="4" fontWeight="medium"> Usuários </Text>
                 </Link>
             </NavSection>
 
             <NavSection title={"IGNITE ROCKETSEAT"}>
-                <NavLink icon={RiReactjsFill} color="blue.400">React JS</NavLink>
-                <NavLink icon={RiReactjsFill} color="purple.300">React Native</NavLink>
-                <NavLink icon={FaNodeJs} color="green.500">Node JS</NavLink>
-                <NavLink icon={SiElixir} color="purple.600">Elixir</NavLink>
+                <NavLink icon={RiReactjsFill} color="blue.400" href='/reactjs'>React JS</NavLink>
+                <NavLink
+                    icon={RiReactjsFill}
+                    color="purple.300"
+                    href='/reactnative'
+                >
+                    React Native
+                </NavLink>
+                <NavLink icon={FaNodeJs} color="green.500" href='/nodejs'>Node JS</NavLink>
+                <NavLink icon={SiElixir} color="purple.600" href='/elixir'>Elixir</NavLink>
             </NavSection>
         </Stack>
     );

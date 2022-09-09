@@ -1,4 +1,5 @@
 import { Box, Button, ButtonGroup, Checkbox, Flex, Heading, Icon, IconButton, Table, Tbody, Td, Text, Th, Thead, Tr, useBreakpointValue } from "@chakra-ui/react";
+import Link from "next/link";
 import { RiAddLine, RiPencilLine } from "react-icons/ri";
 import { Header } from "../../components/Header";
 import { Pagination } from "../../components/Pagination";
@@ -14,30 +15,12 @@ export default function Users() {
         <Box>
             <Header />
 
-            <Flex
-                w="100%"
-                my="6"
-                maxWidth={1480}
-                mx="auto"
-                px="6"
-            >
+            <Flex w="100%" my="6" maxWidth={1480} mx="auto" px="6">
                 <Sidebar />
 
-                <Box
-                    flex="1"
-                    borderRadius={8}
-                    bg="gray.800"
-                    p="8"
-                >
-                    <Flex
-                        mb="8"
-                        justify="space-between"
-                        align="center"
-                    >
-                        <Heading
-                            size="lg"
-                            fontWeight="normal"
-                        >
+                <Box flex="1" borderRadius={8} bg="gray.800" p="8">
+                    <Flex mb="8" justify="space-between" align="center">
+                        <Heading size="lg" fontWeight="normal">
                             Usuários
                         </Heading>
 
@@ -54,9 +37,7 @@ export default function Users() {
                         </Button>
                     </Flex>
 
-                    <Table
-                        colorScheme="whiteAlpha"
-                    >
+                    <Table colorScheme="whiteAlpha">
                         <Thead>
                             <Tr>
                                 <Th px={["4", "4", "6"]} color="gray.300" width="8">
@@ -75,15 +56,10 @@ export default function Users() {
                                 </Td>
                                 <Td px="6">
                                     <Box>
-                                        <Text
-                                            fontWeight={"bold"}
-                                        >
+                                        <Text fontWeight={"bold"}>
                                             Eloan Ferreira
                                         </Text>
-                                        <Text
-                                            fontSize={"small"}
-                                            color={"gray.300"}
-                                        >
+                                        <Text fontSize={"small"} color={"gray.300"}>
                                             eloanmf@hotmail.com
                                         </Text>
                                     </Box>
@@ -92,23 +68,31 @@ export default function Users() {
                                 <Td>
                                     <ButtonGroup size='sm'>
                                         {isWideVersion && (
-                                            <Button
-                                                mr="-5"
-                                                as="a"
-                                                size="sm"
-                                                fontSize="sm"
-                                                colorScheme="purple"
-                                            >
-                                                Edit
-                                            </Button>
+                                            <Link href="/users/create" passHref>
+                                                <Button
+                                                    mr="-5"
+                                                    as="a"
+                                                    size="sm"
+                                                    fontSize="sm"
+                                                    colorScheme="purple"
+                                                >
+                                                    Edit
+                                                </Button>
+                                            </Link>
                                         )}
-                                        <IconButton aria-label='Edit' colorScheme="purple" icon={<Icon as={RiPencilLine} fontSize="16" />} />
+                                        <Link href="/users/create" passHref>
+                                            <IconButton
+                                                as="a"
+                                                aria-label='Edit'
+                                                colorScheme="purple"
+                                                icon={<Icon as={RiPencilLine} fontSize="16" />}
+                                            />
+                                        </Link>
                                     </ButtonGroup>
                                 </Td>
                             </Tr>
                         </Tbody>
                     </Table>
-
                     <Pagination />
                 </Box>
             </Flex>
