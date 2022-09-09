@@ -1,6 +1,6 @@
-import { Flex, Input, Text } from "@chakra-ui/react";
+import { Avatar, Box, Flex, HStack, Input, Text } from "@chakra-ui/react";
 import { Icon } from '@chakra-ui/react'
-import { RiSearchLine } from "react-icons/ri"
+import { RiNotification2Line, RiSearchLine, RiUserAddLine } from "react-icons/ri"
 
 export function Header() {
     return (
@@ -14,6 +14,8 @@ export function Header() {
             paddingX="6" //padding horizontal
             alignItems="center"
         >
+
+            {/* Logo */}
             <Text
                 fontSize="3xl"
                 fontWeight="bold"
@@ -24,7 +26,7 @@ export function Header() {
                 <Text as="span" ml="1" color="yellow.500">.</Text>
             </Text>
 
-
+            {/* Input Search */}
             <Flex
                 as="label"
                 flex="1"
@@ -49,6 +51,49 @@ export function Header() {
 
                 <Icon as={RiSearchLine} fontSize="20" />
             </Flex>
+
+            <Flex
+                align="center"
+                ml="auto" //joga o conteúdo para a direita
+            >
+                {/* HStack  itens fica na Horizontal e o VStack vertical*/}
+                <HStack
+                    spacing="4"
+                    mx="8"
+                    pr="8"
+                    py="1"
+                    color="gray.300"
+                    borderRightWidth={1}
+                    borderColor="gray.700"
+                >
+                    <Icon as={RiNotification2Line} fontSize="20" />
+                    <Icon as={RiUserAddLine} fontSize="20" />
+                </HStack>
+
+                <Flex>
+                    <Box
+                        mr="4"
+                        textAlign="right"
+                    >
+                        <Text>Eloan Ferreira</Text>
+                        <Text
+                            color="gray.300"
+                            fontSize="small"
+                        >
+                            eloanmf@hotmail.com
+                        </Text>
+                    </Box>
+
+                    <Avatar
+                        size="md"
+                        name="Eloan Ferreira" //nome do avatar
+                        src="https://github.com/emffor.png"
+                    />
+
+
+                </Flex>
+            </Flex>
+
         </Flex>
     );
 }
