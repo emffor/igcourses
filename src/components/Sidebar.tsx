@@ -66,7 +66,7 @@ export function Sidebar() {
                             <Icon
                                 as={RiReactjsFill}
                                 fontSize="20"
-                                color="blue.500"
+                                color="blue.400"
                             />
                             <Text
                                 ml="4"
@@ -82,7 +82,7 @@ export function Sidebar() {
                             <Icon
                                 as={RiReactjsFill}
                                 fontSize="20"
-                                color="purple.500"
+                                color="purple.300"
                             />
                             <Text
                                 ml="4"
