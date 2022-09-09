@@ -1,10 +1,15 @@
-import { Box, Button, Checkbox, Flex, Heading, Icon, Table, Tbody, Td, Text, Th, Thead, Tr } from "@chakra-ui/react";
+import { Box, Button, ButtonGroup, Checkbox, Flex, Heading, Icon, IconButton, Table, Tbody, Td, Text, Th, Thead, Tr, useBreakpointValue } from "@chakra-ui/react";
 import { RiAddLine, RiPencilLine } from "react-icons/ri";
 import { Header } from "../../components/Header";
 import { Pagination } from "../../components/Pagination";
 import { Sidebar } from "../../components/Sidebar";
 
 export default function Users() {
+    const isWideVersion = useBreakpointValue({
+        base: false,
+        lg: true,
+    });
+
     return (
         <Box>
             <Header />
@@ -54,22 +59,18 @@ export default function Users() {
                     >
                         <Thead>
                             <Tr>
-                                <Th
-                                    px="6"
-                                    color="gray.300"
-                                    width="8"
-                                >
+                                <Th px={["4", "4", "6"]} color="gray.300" width="8">
                                     <Checkbox colorScheme="yellow" />
                                 </Th>
                                 <Th>Usuário</Th>
-                                <Th>Data de cadastro</Th>
+                                {isWideVersion && <Th>Data de cadastro</Th>}
                                 <Th width={"8"}></Th>
                             </Tr>
                         </Thead>
 
                         <Tbody>
                             <Tr>
-                                <Td px="6">
+                                <Td px={["4", "4", "6"]}>
                                     <Checkbox colorScheme="yellow" />
                                 </Td>
                                 <Td px="6">
@@ -87,17 +88,22 @@ export default function Users() {
                                         </Text>
                                     </Box>
                                 </Td>
-                                <Td>04 de Abril, 2021</Td>
+                                {isWideVersion && <Td>04 de Abril, 2021</Td>}
                                 <Td>
-                                    <Button
-                                        as="a"
-                                        size="sm"
-                                        fontSize="sm"
-                                        colorScheme="purple"
-                                        leftIcon={<Icon as={RiPencilLine} fontSize="16" />}
-                                    >
-                                        Criar novo
-                                    </Button>
+                                    <ButtonGroup size='sm'>
+                                        {isWideVersion && (
+                                            <Button
+                                                mr="-5"
+                                                as="a"
+                                                size="sm"
+                                                fontSize="sm"
+                                                colorScheme="purple"
+                                            >
+                                                Edit
+                                            </Button>
+                                        )}
+                                        <IconButton aria-label='Edit' colorScheme="purple" icon={<Icon as={RiPencilLine} fontSize="16" />} />
+                                    </ButtonGroup>
                                 </Td>
                             </Tr>
                         </Tbody>
