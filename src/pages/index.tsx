@@ -1,8 +1,6 @@
 import { Flex, Button, Stack, Image, FormControl, Box } from '@chakra-ui/react';
 import { Input } from '../components/Form/Input';
 
-import LogoOneSvg from '../assets/logo-one.svg';
-
 export default function Home() {
   return (
     <Flex width={"100vw"} h="100vh" justify="center" alignItems={"center"} flexDirection="column">
@@ -44,11 +42,13 @@ export default function Home() {
         </Stack>
 
         <Button
+          as={"a"}
           type="submit"
           mt="6"
-          bg={"yellow.500"}
-          colorScheme="whiteAlpha"
+          bg={"yellow.600"}
+          colorScheme="yellow"
           color={"white"}
+          href="/dashboard"
         >
           Entrar
         </Button>

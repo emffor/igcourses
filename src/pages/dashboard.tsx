@@ -30,7 +30,8 @@ export default function Dashboard() {
                     minChildWidth="320px" //largura minima de cada elemento, ele vai quebrar a linha quando chegar nesse tamanho
                     alignContent="flex-start" //alinha os elementos na vertical
                 >
-                    <Link
+                    <Button
+                        as="a"
                         type="submit"
                         size="12"
                         colorScheme="facebook" //cor do botão
@@ -47,7 +48,7 @@ export default function Dashboard() {
                             />
                             <Text fontSize="4xl" fontWeight="bold">React JS</Text>
                         </HStack>
-                    </Link>
+                    </Button>
 
                     <Button
                         type="submit"

@@ -44,6 +44,21 @@ export function Sidebar() {
                                 Dashboard
                             </Text>
                         </Link>
+                        <Link
+                            display="flex"
+                            alignContent="center"
+                        >
+                            <Icon
+                                as={RiDashboardLine}
+                                fontSize="20"
+                            />
+                            <Text
+                                ml="4"
+                                fontWeight="medium"
+                            >
+                                Usuários
+                            </Text>
+                        </Link>
                     </Stack>
                 </Box>
                 <Box>
