@@ -36,7 +36,7 @@ export default function Dashboard() {
                         size="12"
                         colorScheme="facebook" //cor do botão
                         color="white"
-                        p="8"
+                        p={["6", "8"]} //paddingX
                         bg="gray.800"
                         borderRadius={8}
                     >
