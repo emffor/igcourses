@@ -23,18 +23,19 @@ export default function Users() {
                         <Heading size="lg" fontWeight="normal">
                             Usuários
                         </Heading>
-
-                        <Button
-                            as="a"
-                            size="sm"
-                            fontSize="sm"
-                            bg={"yellow.600"}
-                            color={"white"}
-                            colorScheme="yellow"
-                            leftIcon={<Icon as={RiAddLine} fontSize="20" />}
-                        >
-                            Criar novo
-                        </Button>
+                        <Link href="/users/create" passHref>
+                            <Button
+                                as="a"
+                                size="sm"
+                                fontSize="sm"
+                                bg={"yellow.600"}
+                                color={"white"}
+                                colorScheme="yellow"
+                                leftIcon={<Icon as={RiAddLine} fontSize="20" />}
+                            >
+                                Criar novo
+                            </Button>
+                        </Link>
                     </Flex>
 
                     <Table colorScheme="whiteAlpha">

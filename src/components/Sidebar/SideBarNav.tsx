@@ -9,16 +9,8 @@ export function SideBarNav() {
     return (
         <Stack spacing="12" align="flex-start">
             <NavSection title={"GERAL"}>
-                <Link display="flex" alignContent="center" href='/dashboard'>
-                    <Icon as={RiDashboard2Line} fontSize="20" />
-                    <Text ml="4" fontWeight="medium">
-                        Dashboard
-                    </Text>
-                </Link>
-                <Link display="flex" alignContent="center" href='/users'>
-                    <Icon as={RiDashboardLine} fontSize="20" />
-                    <Text ml="4" fontWeight="medium"> Usuários </Text>
-                </Link>
+                <NavLink icon={RiDashboard2Line} href='/dashboard'>Dashboard</NavLink>
+                <NavLink icon={RiDashboardLine} href='/users'>Usuários</NavLink>
             </NavSection>
 
             <NavSection title={"IGNITE ROCKETSEAT"}>
