@@ -1,4 +1,4 @@
-import { Button, Flex, HStack, Icon, SimpleGrid, Text } from "@chakra-ui/react";
+import { Box, Button, Center, Container, Flex, HStack, Icon, Image, SimpleGrid, SkeletonCircle, SkeletonText, Stack, Text, Textarea, VStack } from "@chakra-ui/react";
 import { Header } from "../components/Header";
 import { Sidebar } from "../components/Sidebar";
 import { RiReactjsFill } from "react-icons/ri";
@@ -43,11 +43,13 @@ export default function Dashboard() {
                             borderRadius={8}
                         >
                             <HStack>
-                                <Icon
-                                    as={RiReactjsFill}
-                                    fontSize="40"
-                                    color="blue.400"
+                                <Image
+                                    borderRadius='full'
+                                    boxSize='12'
+                                    src='https://i.ibb.co/M23pSQm/react-js.png'
+                                    alt='react js'
                                 />
+
                                 <Text fontSize="4xl" fontWeight="bold">React JS</Text>
                             </HStack>
                         </Button>
@@ -63,13 +65,13 @@ export default function Dashboard() {
                             p="8"
                             bg="gray.800"
                             borderRadius={8}
-
                         >
                             <HStack>
-                                <Icon
-                                    as={RiReactjsFill}
-                                    fontSize="40"
-                                    color="purple.300"
+                                <Image
+                                    borderRadius='full'
+                                    boxSize='12'
+                                    src='https://i.ibb.co/GVRm201/react-native.png'
+                                    alt='Dan Abramov'
                                 />
                                 <Text fontSize="4xl" fontWeight="bold">React Native</Text>
                             </HStack>
@@ -88,10 +90,11 @@ export default function Dashboard() {
                             borderRadius={8}
                         >
                             <HStack>
-                                <Icon
-                                    as={FaNodeJs}
-                                    fontSize="40"
-                                    color="green.500"
+                                <Image
+                                    borderRadius='full'
+                                    boxSize='12'
+                                    src='https://i.ibb.co/D7VrCYx/node-js.png'
+                                    alt='Dan Abramov'
                                 />
                                 <Text fontSize="4xl" fontWeight="bold">Node JS</Text>
                             </HStack>
@@ -110,10 +113,11 @@ export default function Dashboard() {
                             borderRadius={8}
                         >
                             <HStack>
-                                <Icon
-                                    as={SiElixir}
-                                    fontSize="40"
-                                    color="purple.600"
+                                <Image
+                                    borderRadius='full'
+                                    boxSize='12'
+                                    src='https://i.ibb.co/YZdPyq0/elixir.png'
+                                    alt='Dan Abramov'
                                 />
                                 <Text fontSize="4xl" fontWeight="bold">Elixir</Text>
                             </HStack>
