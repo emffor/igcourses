@@ -22,7 +22,7 @@ export function NavSection({ title, classes, time, children }: NavSectionProps) 
                 <AccordionItem
                     border="none"
                     bg={"gray.800"}
-                    width={320}
+                    width="lg"
                     maxWidth={320}
                     borderRadius="10"
                 >
