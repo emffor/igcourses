@@ -185,7 +185,8 @@ export default function TrailOne() {
                             </Flex>
 
                             <Link
-                                href="/reactjs/"
+                                href="/reactjs/library/libraryOne"
+                                passHref
                             >
                                 <Button
                                     as="a"

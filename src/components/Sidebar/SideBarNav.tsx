@@ -1,4 +1,4 @@
-import { Icon, Link, Stack, Text } from '@chakra-ui/react';
+import { Stack } from '@chakra-ui/react';
 import { FaNodeJs } from 'react-icons/fa';
 import { RiDashboard2Line, RiDashboardLine, RiReactjsFill } from 'react-icons/ri';
 import { SiElixir } from 'react-icons/si';
