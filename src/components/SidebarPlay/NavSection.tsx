@@ -1,7 +1,5 @@
 import { ReactNode } from "react";
 import { Accordion, AccordionButton, AccordionIcon, AccordionItem, AccordionPanel, Box, Icon, Stack, Text, VStack } from "@chakra-ui/react";
-import { GrFormSubtract } from 'react-icons/gr';
-import { BsPlus } from 'react-icons/bs';
 import { BsPlayBtnFill } from "react-icons/bs";
 
 

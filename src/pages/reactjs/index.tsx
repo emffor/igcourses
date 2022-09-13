@@ -46,7 +46,7 @@ export default function ReactJs() {
                         </Button>
                     </Link>
 
-                    <Link href="/reactjs" passHref>
+                    <Link href="/reactjs/trailtwo" passHref>
                         <Button
                             as="a"
                             type="submit"

@@ -74,10 +74,9 @@ export default function libraryOne() {
 
                 {
                     sizeVideo ?
-                        <Stack align="flex-start">
+                        <Stack align="flex-start" >
                             <NavSection title={"Configurando ambiente"} classes='11' time='01:00:59'>
                                 <NavLink
-
                                     onClick={() => setLinkVideo('http://www.youtube.com/embed/xFkb-i2AXGo', 'Introdução do módulo')}
                                 >
                                     Introdução do módulo
