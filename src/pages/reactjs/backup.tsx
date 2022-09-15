@@ -35,7 +35,9 @@ export default function TrailOne() {
                     alignContent="flex-start" //alinha os elementos na vertical
                 >
 
-                    <Flex flexDirection="column">
+                    <Flex
+                        flexDirection="column"
+                    >
                         <Stack mb={["2", "4"]} color="green.300">
                             <Heading size="lg">React JS - Trilha 2021</Heading>
                         </Stack>
