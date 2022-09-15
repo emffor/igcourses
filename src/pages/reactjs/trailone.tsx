@@ -42,7 +42,7 @@ export default function TrailOne() {
                             mb={["2", "4"]}
                             color="green.300"
                         >
-                            <Heading size="lg">Trilha 2021</Heading>
+                            <Heading size="lg">React JS - Trilha 2021</Heading>
                         </Stack>
 
 
