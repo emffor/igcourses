@@ -17,8 +17,9 @@ export default function TrailOne() {
         lg: true,
     });
 
-    function OpenChallenge01() {
-        window.open("https://www.notion.so/Cronograma-de-Estudos-9becd9b07a0e43c4bbf15826496f986a", "_blank");
+
+    function OpenChallenge(link: string) {
+        window.open(link, "_blank");
     }
 
     return (
@@ -42,50 +43,52 @@ export default function TrailOne() {
 
 
                         {/* Desafio Study */}
-                        <Flex
-                            as="a"
-                            type="submit"
-                            borderRadius={8}
-                            bg="green.900"
-                            color="white"
-                            mb={["6", "8"]}
-                            p={["6", "8"]}
-                        >
-                            <HStack width="100%">
-                                <VStack width="100%" spacing="4" align="stretch">
-                                    <HStack justifyContent="space-between">
-                                        <Heading size="lg">
-                                            Desafio: Organizando seus estudos
-                                        </Heading>
+                        <Stack>
+                            <Flex
+                                as="a"
+                                type="submit"
+                                borderRadius={8}
+                                bg="green.900"
+                                color="white"
+                                mb={["6", "8"]}
+                                p={["6", "8"]}
+                            >
+                                <HStack width="100%">
+                                    <VStack width="100%" spacing="4" align="stretch">
+                                        <HStack justifyContent="space-between">
+                                            <Heading size="lg">
+                                                Desafio: Organizando seus estudos
+                                            </Heading>
 
-                                        <Icon
-                                            as={GiTrail}
-                                            fontSize="40"
-                                            color="orange"
-                                            mb={110}
-                                        />
-                                    </HStack>
-                                    <Text>
-                                        Bora criar um cronograma de estudos e definir seu objetivo
-                                    </Text>
+                                            <Icon
+                                                as={GiTrail}
+                                                fontSize="40"
+                                                color="orange"
+                                                mb={110}
+                                            />
+                                        </HStack>
+                                        <Text>
+                                            Bora criar um cronograma de estudos e definir seu objetivo
+                                        </Text>
 
-                                    <Wrap spacing={4}>
-                                        <WrapItem>
-                                            <ChakraLink>
-                                                <Button
-                                                    as="a"
-                                                    colorScheme="green"
-                                                    color="green.100"
-                                                    onClick={OpenChallenge01}
-                                                >
-                                                    Introdução
-                                                </Button>
-                                            </ChakraLink>
-                                        </WrapItem>
-                                    </Wrap>
-                                </VStack>
-                            </HStack>
-                        </Flex>
+                                        <Wrap spacing={4}>
+                                            <WrapItem>
+                                                <ChakraLink>
+                                                    <Button
+                                                        as="a"
+                                                        colorScheme="green"
+                                                        color="green.100"
+                                                        onClick={() => OpenChallenge('https://jolly-helenium-84a.notion.site/Cronograma-de-Estudos-54c1d510349e4990b27fdd4af7209133')}
+                                                    >
+                                                        Introdução
+                                                    </Button>
+                                                </ChakraLink>
+                                            </WrapItem>
+                                        </Wrap>
+                                    </VStack>
+                                </HStack>
+                            </Flex>
+                        </Stack>
 
                         {/* Ignite Start React JS */}
                         <Flex
@@ -103,13 +106,19 @@ export default function TrailOne() {
                                         Prepare-se para decolar! Queremos te dar as boas-vindas ao Ignite e mostrar qual será seu percurso no programa de aceleração.
                                     </Text>
 
-                                    <Stack>
-                                        <Link href="/reactjs" passHref>
-                                            <ChakraLink as="a" color="#bd83bf">
-                                                Assistir vídeo
+                                    <Wrap spacing={4}>
+                                        <WrapItem>
+                                            <ChakraLink>
+                                                <Button
+                                                    color='#bd83bf'
+                                                    variant='link'
+                                                    onClick={() => OpenChallenge('https://drive.google.com/file/d/1JxdYx-xH09wpxckrHmD-ippns004EmCh/view?usp=sharing')}
+                                                >
+                                                    Assistir vídeo
+                                                </Button>
                                             </ChakraLink>
-                                        </Link>
-                                    </Stack>
+                                        </WrapItem>
+                                    </Wrap>
                                 </VStack>
 
                                 <VStack>
@@ -120,8 +129,6 @@ export default function TrailOne() {
                                         mb={110}
                                         mr="8"
                                     />
-
-
                                 </VStack>
                             </HStack>
                         </Flex>
@@ -216,17 +223,16 @@ export default function TrailOne() {
                                 </Flex>
 
                                 <Stack direction="row">
-                                    <Link href="/reactjs/library/libraryOne" passHref>
-                                        <Button
-                                            as="a"
-                                            colorScheme="purple"
-                                            bg="purple.800"
-                                            color="purple.400"
-                                            mb={["6", "8"]}
-                                        >
-                                            INSTRUÇÕES
-                                        </Button>
-                                    </Link>
+                                    <Button
+                                        as="a"
+                                        colorScheme="purple"
+                                        bg="purple.800"
+                                        color="purple.400"
+                                        mb={["6", "8"]}
+                                        onClick={() => OpenChallenge('https://jolly-helenium-84a.notion.site/Desafio-01-Conceitos-do-React-f03fb19ee7f24a24bc98b88324a2d3d5')}
+                                    >
+                                        INSTRUÇÕES
+                                    </Button>
                                 </Stack>
                             </Flex>
                         </Stack>
@@ -262,17 +268,18 @@ export default function TrailOne() {
                                 </Flex>
 
                                 <Stack direction="row">
-                                    <Link href="/reactjs/library/libraryOne" passHref>
-                                        <Button
-                                            as="a"
-                                            colorScheme="purple"
-                                            bg="purple.800"
-                                            color="purple.400"
-                                            mb={["6", "8"]}
-                                        >
-                                            INSTRUÇÕES
-                                        </Button>
-                                    </Link>
+
+                                    <Button
+                                        as="a"
+                                        colorScheme="purple"
+                                        bg="purple.800"
+                                        color="purple.400"
+                                        mb={["6", "8"]}
+                                        onClick={() => OpenChallenge('https://jolly-helenium-84a.notion.site/Desafio-02-Componentizando-a-aplica-o-682b99664117420997b7330c18bae455')}
+                                    >
+                                        INSTRUÇÕES
+                                    </Button>
+
                                 </Stack>
                             </Flex>
                         </Stack>
@@ -364,17 +371,20 @@ export default function TrailOne() {
                                 </Flex>
 
                                 <Stack direction="row">
-                                    <Link href="/reactjs/library/libraryOne" passHref>
-                                        <Button
-                                            as="a"
-                                            colorScheme="purple"
-                                            bg="purple.800"
-                                            color="purple.400"
-                                            mb={["6", "8"]}
-                                        >
-                                            INSTRUÇÕES
-                                        </Button>
-                                    </Link>
+
+                                    <Button
+                                        as="a"
+                                        colorScheme="purple"
+                                        bg="purple.800"
+                                        color="purple.400"
+                                        mb={["6", "8"]}
+                                        onClick={() => OpenChallenge(
+                                            'https://jolly-helenium-84a.notion.site/Desafio-01-Criando-um-hook-de-carrinho-de-compras-5007db9c82fb427a833a868be7870b85'
+                                        )}
+                                    >
+                                        INSTRUÇÕES
+                                    </Button>
+
                                 </Stack>
                             </Flex>
                         </Stack>
@@ -409,20 +419,18 @@ export default function TrailOne() {
                                     </Text>
                                 </Flex>
 
-                                <Stack
-                                    direction="row"
-                                >
-                                    <Link href="/reactjs/library/libraryOne" passHref>
-                                        <Button
-                                            as="a"
-                                            colorScheme="purple"
-                                            bg="purple.800"
-                                            color="purple.400"
-                                            mb={["6", "8"]}
-                                        >
-                                            INSTRUÇÕES
-                                        </Button>
-                                    </Link>
+                                <Stack direction="row">
+                                    <Button
+                                        as="a"
+                                        colorScheme="purple"
+                                        bg="purple.800"
+                                        color="purple.400"
+                                        mb={["6", "8"]}
+                                        onClick={() => OpenChallenge('https://jolly-helenium-84a.notion.site/Desafio-02-Refactoring-de-classes-e-typescript-cd1776af20f5470d93796357c5fb077d')}
+                                    >
+                                        INSTRUÇÕES
+                                    </Button>
+
                                 </Stack>
                             </Flex>
                         </Stack>
@@ -450,11 +458,19 @@ export default function TrailOne() {
                                         </Text>
 
                                         <Stack>
-                                            <Link href="/reactjs" passHref>
-                                                <ChakraLink as="a" color="#bd83bf">
-                                                    Assistir vídeo
-                                                </ChakraLink>
-                                            </Link>
+                                            <Wrap spacing={4}>
+                                                <WrapItem>
+                                                    <ChakraLink>
+                                                        <Button
+                                                            color='#bd83bf'
+                                                            variant='link'
+                                                            onClick={() => OpenChallenge('https://drive.google.com/file/d/1mN15XWLR0kZPyzDPoc4lL4ycWZ0bTSqm/view?usp=sharing')}
+                                                        >
+                                                            Assistir vídeo
+                                                        </Button>
+                                                    </ChakraLink>
+                                                </WrapItem>
+                                            </Wrap>
                                         </Stack>
                                     </VStack>
 
@@ -565,10 +581,7 @@ export default function TrailOne() {
                                     </Text>
                                 </Flex>
 
-                                <Link
-                                    href="/reactjs/library/libraryOne"
-                                    passHref
-                                >
+                                <Link href="/reactjs/library/libraryOne" passHref>
                                     <Button
                                         as="a"
                                         colorScheme="facebook"
@@ -655,7 +668,11 @@ export default function TrailOne() {
                                         Desafio: Criando uma aplicação do zero
                                     </Heading>
 
-                                    <Icon as={MdOutlineDesignServices} color="cyan.400" fontSize="50" />
+                                    <Icon
+                                        as={MdOutlineDesignServices}
+                                        color="cyan.400"
+                                        fontSize="50"
+                                    />
                                 </HStack>
 
                                 <Flex py="8">
@@ -664,23 +681,19 @@ export default function TrailOne() {
                                     </Text>
                                 </Flex>
 
-                                <Stack
-                                    direction="row"
-                                >
-                                    <Link
-                                        href="/reactjs/library/libraryOne"
-                                        passHref
+                                <Stack direction="row">
+                                    <Button
+                                        as="a"
+                                        colorScheme="purple"
+                                        bg="purple.800"
+                                        color="purple.400"
+                                        mb={["6", "8"]}
+                                        onClick={() => {
+                                            window.open('https://jolly-helenium-84a.notion.site/Desafio-01-Criando-um-projeto-do-zero-317c0136f9eb4a86985ed21f490f57b6')
+                                        }}
                                     >
-                                        <Button
-                                            as="a"
-                                            colorScheme="purple"
-                                            bg="purple.800"
-                                            color="purple.400"
-                                            mb={["6", "8"]}
-                                        >
-                                            INSTRUÇÕES
-                                        </Button>
-                                    </Link>
+                                        INSTRUÇÕES
+                                    </Button>
                                 </Stack>
                             </Flex>
                         </Stack>
@@ -788,23 +801,20 @@ export default function TrailOne() {
                                     </Text>
                                 </Flex>
 
-                                <Stack
-                                    direction="row"
-                                >
-                                    <Link
-                                        href="/reactjs/library/libraryOne"
-                                        passHref
+                                <Stack direction="row">
+                                    <Button
+                                        as="a"
+                                        colorScheme="purple"
+                                        bg="purple.800"
+                                        color="purple.400"
+                                        mb={["6", "8"]}
+                                        onClick={() => {
+                                            window.open('https://jolly-helenium-84a.notion.site/Desafio-01-Interface-com-Chakra-UI-e59fa7dca8e844b3a41f27c81ba2b5c0')
+                                        }}
                                     >
-                                        <Button
-                                            as="a"
-                                            colorScheme="purple"
-                                            bg="purple.800"
-                                            color="purple.400"
-                                            mb={["6", "8"]}
-                                        >
-                                            INSTRUÇÕES
-                                        </Button>
-                                    </Link>
+                                        INSTRUÇÕES
+                                    </Button>
+
                                 </Stack>
                             </Flex>
                         </Stack>
@@ -821,11 +831,7 @@ export default function TrailOne() {
                                 borderRadius={8}
                                 pt={["6", "8"]}
                             >
-                                <HStack
-                                    flex={"1"}
-                                    align="flex-start"
-
-                                >
+                                <HStack flex={"1"} align="flex-start">
                                     <Stack boxSize="28" >
                                         <Image
                                             objectFit='cover'
@@ -847,11 +853,7 @@ export default function TrailOne() {
                                     </HStack>
                                 </HStack>
 
-                                <Flex
-                                    pl="120px"
-                                    py="8"
-                                    mt="-20"
-                                >
+                                <Flex pl="120px" py="8" mt="-20">
                                     <Text>
                                         Nesse módulo vamos utilizar o React Query para melhorar a experiência de uso da nossa aplicação criando uma camada de cache de dados entre o front-end e back-end.
                                     </Text>
@@ -952,9 +954,7 @@ export default function TrailOne() {
                                 borderRadius={8}
                                 pt={["6", "8"]}
                             >
-                                <HStack
-                                    width="100%"
-                                >
+                                <HStack width="100%">
                                     <Heading size={["sm", "lg"]} color="white" mr="auto">
                                         Desafio: Upload de imagens
                                     </Heading>
@@ -966,31 +966,25 @@ export default function TrailOne() {
                                     />
                                 </HStack>
 
-                                <Flex
-                                    py="8"
-                                >
+                                <Flex py="8">
                                     <Text>
                                         Nesse desafio você deve realizar o upload e listagem de imagens utilizando React Query, React Hook Form e Chakra UI.
                                     </Text>
                                 </Flex>
 
-                                <Stack
-                                    direction="row"
-                                >
-                                    <Link
-                                        href="/reactjs/library/libraryOne"
-                                        passHref
+                                <Stack direction="row">
+                                    <Button
+                                        as="a"
+                                        colorScheme="purple"
+                                        bg="purple.800"
+                                        color="purple.400"
+                                        mb={["6", "8"]}
+                                        onClick={() => {
+                                            window.open('https://jolly-helenium-84a.notion.site/Desafio-02-Upload-de-imagens-c6706089b25c42bdb3c29ee179c89959', '_blank')
+                                        }}
                                     >
-                                        <Button
-                                            as="a"
-                                            colorScheme="purple"
-                                            bg="purple.800"
-                                            color="purple.400"
-                                            mb={["6", "8"]}
-                                        >
-                                            INSTRUÇÕES
-                                        </Button>
-                                    </Link>
+                                        INSTRUÇÕES
+                                    </Button>
                                 </Stack>
                             </Flex>
                         </Stack>
@@ -1010,11 +1004,7 @@ export default function TrailOne() {
                                 color="white"
                             >
                                 <HStack>
-                                    <VStack
-                                        spacing="4"
-                                        align="stretch"
-                                        p={["6", "8"]}
-                                    >
+                                    <VStack spacing="4" align="stretch" p={["6", "8"]}>
                                         <Heading size="lg">Advance and Explore</Heading>
 
                                         <Text>
@@ -1022,16 +1012,25 @@ export default function TrailOne() {
                                         </Text>
 
                                         <Stack>
-                                            <Link href="/reactjs" passHref>
-                                                <ChakraLink as="a" color="#bd83bf">
-                                                    Assistir vídeo
-                                                </ChakraLink>
-                                            </Link>
+                                            <Wrap spacing={4}>
+                                                <WrapItem>
+                                                    <ChakraLink>
+                                                        <Button
+                                                            color='#bd83bf'
+                                                            variant='link'
+                                                            onClick={() => OpenChallenge('https://drive.google.com/file/d/10qD70R_4G-sCpUxw6vwSEMcUVSc3Idsr/view?usp=sharing')}
+                                                        >
+                                                            Assistir vídeo
+                                                        </Button>
+                                                    </ChakraLink>
+                                                </WrapItem>
+                                            </Wrap>
                                         </Stack>
+
+
                                     </VStack>
 
-                                    <VStack
-                                    >
+                                    <VStack>
                                         <Icon
                                             as={GoDeviceCameraVideo}
                                             fontSize="40"
@@ -1133,31 +1132,26 @@ export default function TrailOne() {
                                     />
                                 </HStack>
 
-                                <Flex
-                                    py="8"
-                                >
+                                <Flex py="8">
                                     <Text>
                                         Nesse desafio, você irá aplicar estratégias de otimização no React conforme visto no módulo anterior para performar uma aplicação já pronta.
                                     </Text>
                                 </Flex>
 
-                                <Stack
-                                    direction="row"
-                                >
-                                    <Link
-                                        href="/reactjs/library/libraryOne"
-                                        passHref
+                                <Stack direction="row">
+                                    <Button
+                                        as="a"
+                                        colorScheme="purple"
+                                        bg="purple.800"
+                                        color="purple.400"
+                                        mb={["6", "8"]}
+                                        onClick={() => {
+                                            window.open('https://jolly-helenium-84a.notion.site/Desafio-01-Otimizando-a-aplica-o-def2b13641d74a58826a3292494472f8', '_blank')
+                                        }}
                                     >
-                                        <Button
-                                            as="a"
-                                            colorScheme="purple"
-                                            bg="purple.800"
-                                            color="purple.400"
-                                            mb={["6", "8"]}
-                                        >
-                                            INSTRUÇÕES
-                                        </Button>
-                                    </Link>
+                                        INSTRUÇÕES
+                                    </Button>
+
                                 </Stack>
                             </Flex>
                         </Stack>
@@ -1319,23 +1313,19 @@ export default function TrailOne() {
                                     </Text>
                                 </Flex>
 
-                                <Stack
-                                    direction="row"
-                                >
-                                    <Link
-                                        href="/reactjs/library/libraryOne"
-                                        passHref
+                                <Stack direction="row">
+                                    <Button
+                                        as="a"
+                                        colorScheme="purple"
+                                        bg="purple.800"
+                                        color="purple.400"
+                                        mb={["6", "8"]}
+                                        onClick={() => {
+                                            window.open('https://jolly-helenium-84a.notion.site/Desafio-01-Deploy-do-Ignews-c30473a1c66a47f8b7affaa959a0ea22', '_blank')
+                                        }}
                                     >
-                                        <Button
-                                            as="a"
-                                            colorScheme="purple"
-                                            bg="purple.800"
-                                            color="purple.400"
-                                            mb={["6", "8"]}
-                                        >
-                                            INSTRUÇÕES
-                                        </Button>
-                                    </Link>
+                                        INSTRUÇÕES
+                                    </Button>
                                 </Stack>
                             </Flex>
                         </Stack>
@@ -1362,16 +1352,25 @@ export default function TrailOne() {
                                         </Text>
 
                                         <Stack>
-                                            <Link href="/reactjs" passHref>
-                                                <ChakraLink as="a" color="#bd83bf">
-                                                    Assistir vídeo
-                                                </ChakraLink>
-                                            </Link>
+                                            <Wrap spacing={4}>
+                                                <WrapItem>
+                                                    <ChakraLink>
+                                                        <Button
+                                                            color='#bd83bf'
+                                                            variant='link'
+                                                            onClick={() => OpenChallenge('https://drive.google.com/file/d/1IKYhwbfOPJH8DB1QyyE8-tlq5Ia8Kp7m/view?usp=sharing')}
+                                                        >
+                                                            Assistir vídeo
+                                                        </Button>
+                                                    </ChakraLink>
+                                                </WrapItem>
+                                            </Wrap>
                                         </Stack>
+
+
                                     </VStack>
 
-                                    <VStack
-                                    >
+                                    <VStack>
                                         <Icon
                                             as={GoDeviceCameraVideo}
                                             fontSize="40"
